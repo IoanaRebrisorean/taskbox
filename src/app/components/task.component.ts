@@ -46,3 +46,4 @@ export class TaskComponent implements OnInit {
     this.onArchiveTask.emit(id);
   }
 }
+

@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "CHROMATIC_APP_CODE=2rgvhuzl29l chromatic"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +34,7 @@
     "@angular/language-service": "~9.1.0",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
     "@storybook/addon-actions": "^5.3.17",
     "@storybook/addon-links": "^5.3.17",
@@ -40,6 +42,9 @@
     "@storybook/addon-storyshots": "^5.3.17",
     "@storybook/addons": "^5.3.17",
     "@storybook/angular": "^5.3.17",
+    "@storybook/api": "^5.3.17",
+    "@storybook/components": "^5.3.17",
+    "@storybook/theming": "^5.3.17",
     "@testing-library/angular": "^9.0.0",
     "@testing-library/jest-dom": "^5.3.0",
     "@types/jasmine": "~3.5.0",
@@ -58,12 +63,11 @@
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "protractor": "~5.4.3",
+    "storybook-chromatic": "^3.5.2",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
   },
-  
-  
   "jest": {
     "preset": "jest-preset-angular",
     "setupFilesAfterEnv": [
@@ -102,7 +106,6 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/jest-config/fileMock.js"
     },
     "transform": {
-      
       "^.+\\.(ts|html)$": "ts-jest",
       "^.+\\.js$": "babel-jest",
       "^.+\\.stories\\.[jt]sx?$": "@storybook/addon-storyshots/injectFileName"
